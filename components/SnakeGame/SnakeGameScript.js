@@ -2,7 +2,10 @@ export const SnakeGameScript = (canvas) => {
   const ctx = canvas.getContext("2d");
   const buttonStart = document.getElementById("btnStart");
   const scoreDisplay = document.getElementById("scores");
-
+  const btnUp = document.getElementById("btnUp");
+  const btnLeft = document.getElementById("btnLeft");
+  const btnRight = document.getElementById("btnRight");
+  const btnDown = document.getElementById("btnDown");
   canvas.width = 400;
   canvas.height = 400;
 
@@ -85,6 +88,22 @@ export const SnakeGameScript = (canvas) => {
     if (event.key === "ArrowDown" && direction !== "UP") direction = "DOWN";
     if (event.key === "ArrowLeft" && direction !== "RIGHT") direction = "LEFT";
     if (event.key === "ArrowRight" && direction !== "LEFT") direction = "RIGHT";
+  });
+
+  btnUp.addEventListener("click", () => {
+    if (direction !== "DOWN") direction = "UP";
+  });
+
+  btnDown.addEventListener("click", () => {
+    if (direction !== "UP") direction = "DOWN";
+  });
+
+  btnLeft.addEventListener("click", () => {
+    if (direction !== "RIGHT") direction = "LEFT";
+  });
+
+  btnRight.addEventListener("click", () => {
+    if (direction !== "LEFT") direction = "RIGHT";
   });
 
   buttonStart.addEventListener("click", startGame);
