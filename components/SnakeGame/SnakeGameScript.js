@@ -6,8 +6,9 @@ export const SnakeGameScript = (canvas) => {
   const btnLeft = document.getElementById("btnLeft");
   const btnRight = document.getElementById("btnRight");
   const btnDown = document.getElementById("btnDown");
-  canvas.width = 400;
-  canvas.height = 400;
+  const jstick = document.getElementById("display-joy-stick");
+  canvas.width = 300;
+  canvas.height = 300;
 
   const box = 10;
   let snake, food, direction, score, gameLoop;
@@ -17,8 +18,7 @@ export const SnakeGameScript = (canvas) => {
     gameStarted = true;
     buttonStart.style.display = "none";
     canvas.style.display = "block";
-
-    snake = [{ x: 50, y: 50 }];
+    snake = [{ x: 100, y: 100 }];
     direction = "RIGHT";
     score = 0;
     scoreDisplay.textContent = score;

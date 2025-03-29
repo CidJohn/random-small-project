@@ -29,10 +29,11 @@ function SnakeGame(container) {
   canvas.classList.add(...canvasLayout);
   container.appendChild(canvas);
 
-  const jstickCont = temp.div(container, "", [
+  const jstickCont = temp.div(container, "display-joy-stick", [
     "jstick-cont",
     "flex",
     "justify-center",
+    "item-center",
     "w-full",
     "md:hidden",
   ]);
@@ -40,6 +41,7 @@ function SnakeGame(container) {
   const jstick = temp.div(jstickCont, "joy_stick", [
     "flex",
     "flex-col",
+    "mx-auto",
     "w-75",
     "h-50",
     "px-2",
@@ -53,6 +55,10 @@ function SnakeGame(container) {
     "border",
     "border-gray-700",
     "rounded-lg",
+    "hover:bg-green-700",
+    "hover:border-none",
+    "hover:font-bold",
+    "hover:text-white",
   ]);
   btnUp.innerHTML = `
 <svg class="w-6 h-6 text-gray-800 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
@@ -74,6 +80,10 @@ function SnakeGame(container) {
     "border",
     "border-gray-700",
     "rounded-lg",
+    "hover:bg-green-700",
+    "hover:border-none",
+    "hover:font-bold",
+    "hover:text-white",
   ]);
   btnLeft.innerHTML = `
    <svg class="w-6 h-6 text-gray-800 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
@@ -88,6 +98,10 @@ function SnakeGame(container) {
     "border",
     "border-gray-700",
     "rounded-lg",
+    "hover:bg-green-700",
+    "hover:border-none",
+    "hover:font-bold",
+    "hover:text-white",
   ]);
   btnRight.innerHTML = `
 <svg class="w-6 h-6 text-gray-800 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
@@ -104,6 +118,10 @@ function SnakeGame(container) {
     "border",
     "border-gray-700",
     "rounded-lg",
+    "hover:bg-green-700",
+    "hover:border-none",
+    "hover:font-bold",
+    "hover:text-white",
   ]);
   btnDown.innerHTML = `
    <svg class="w-6 h-6 text-gray-800 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
